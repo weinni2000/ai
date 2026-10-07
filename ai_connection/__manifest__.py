@@ -12,8 +12,8 @@
         "ai_tool",
     ],
     "data": [
-        "security/ir.model.access.csv",
         "views/ai_connection.xml",
+        "security/ir.access.csv",
     ],
     "demo": [],
 }
