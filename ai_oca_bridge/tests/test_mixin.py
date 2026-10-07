@@ -36,14 +36,12 @@ class TestBridge(TransactionCase):
             login="bridge_portal_user",
             groups="base.group_portal",
         )
-        cls.env["ir.model.access"].create(
+        cls.env["ir.access"].create(
             {
                 "name": "ai.bridge.execution user access",
                 "model_id": cls.env["ir.model"]._get_id("bridge.test"),
-                "perm_create": True,
-                "perm_read": True,
-                "perm_write": True,
-                "perm_unlink": True,
+                "group_id": cls.env.ref("base.group_everyone").id,
+                "operation": "crud",
             }
         )
 
