@@ -1,13 +1,13 @@
-import {Chatter} from "@mail/chatter/web_portal/chatter";
+import {Chatter} from "@mail/chatter/web_portal_project/chatter";
 import {patch} from "@web/core/utils/patch";
 
 patch(Chatter.prototype, {
     async onClickAiBridge(aiBridge) {
         let saved = true;
 
-        if (this.props.saveRecord) {
+        if (this.webChatterProps.saveRecord) {
             try {
-                saved = await this.props.saveRecord();
+                saved = await this.webChatterProps.saveRecord();
             } catch (error) {
                 saved = false;
                 console.error("Error saving record:", error);
@@ -18,8 +18,8 @@ patch(Chatter.prototype, {
             return;
         }
 
-        const model = this.props.record.resModel;
-        const id = this.props.record.resId;
+        const model = this.webChatterProps.record.resModel;
+        const id = this.webChatterProps.record.resId;
 
         const result = await this.env.services.orm.call(
             "ai.bridge",

@@ -5,10 +5,10 @@
         t-inherit="mail.Chatter"
         t-inherit-mode="extension"
     >
-        <xpath expr="//div/div/div/button" position="before">
+        <xpath expr="//button[@t-on-click='this.onClickSearch']" position="after">
             <ChatterAITopbar
                 record="this"
-                t-if="props.record and props.record.data.ai_bridge_info and props.record.data.ai_bridge_info.length > 0"
+                t-if="this.webChatterProps.record and this.webChatterProps.record.data.ai_bridge_info and this.webChatterProps.record.data.ai_bridge_info.length > 0"
             />
         </xpath>
     </t>

@@ -1,18 +1,21 @@
-import {Component, markup} from "@odoo/owl";
+import {Component, markup, t, useProps} from "@odoo/owl";
 import {usePopover} from "@web/core/popover/popover_hook";
 
 export class ChatterAIItemPopover extends Component {
     static template = "ai_oca_bridge.ChatterAIItemPopover";
+    props = useProps({help: t.any().optional(), close: t.function().optional()});
 }
 
 export class ChatterAIItem extends Component {
     static template = "ai_oca_bridge.ChatterAIItem";
-    static props = {bridge: Object};
+    props = useProps({bridge: t.object()});
 
     setup() {
         super.setup();
-        this.popover = usePopover();
-        this.tooltipPopover = null;
+        this.popover = usePopover(ChatterAIItemPopover, {
+            closeOnClickAway: true,
+            position: "top",
+        });
     }
     get tooltipInfo() {
         return {
@@ -20,16 +23,7 @@ export class ChatterAIItem extends Component {
         };
     }
     onMouseEnter(ev) {
-        this.closeTooltip();
-        this.tooltipPopover = this.popover.add(
-            ev.currentTarget,
-            ChatterAIItemPopover,
-            this.tooltipInfo,
-            {
-                closeOnClickAway: true,
-                position: "top",
-            }
-        );
+        this.popover.open(ev.currentTarget, this.tooltipInfo);
     }
 
     onMouseLeave() {
@@ -37,9 +31,6 @@ export class ChatterAIItem extends Component {
     }
 
     closeTooltip() {
-        if (this.tooltipPopover) {
-            this.tooltipPopover();
-            this.tooltipPopover = null;
-        }
+        this.popover.close();
     }
 }
