@@ -66,7 +66,7 @@ class TestBridge(TransactionCase):
         for model_name in model_names:
             del cls.registry[model_name]
         # Force ``TransactionCase`` to rebuild the registry without the fake models.
-        cls.registry.registry_invalidated = True
+        cls.env.transaction.will_change_registry()
 
     def test_bridge_creation_user(self):
         self.bridge.write({"usage": "ai_thread_create"})
