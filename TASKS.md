@@ -1,6 +1,6 @@
 # Upgrade 19.0 -> 20.0
 
 - [x] ai_tool
-- [ ] ai_oca_bridge
-- [ ] ai_connection
-- [ ] ai_oca_mcp
+- [x] ai_oca_bridge
+- [x] ai_connection
+- [x] ai_oca_mcp
