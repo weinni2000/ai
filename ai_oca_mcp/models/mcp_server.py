@@ -20,7 +20,7 @@ class McpServer(models.Model):
         groups="base.group_system",
     )
     tool_ids = fields.Many2many(
-        "ai.tool", string="Tools", domain=[("kind", "=", "generic")]
+        "ai.oca.tool", string="Tools", domain=[("kind", "=", "generic")]
     )
     url = fields.Char(
         compute="_compute_url",
