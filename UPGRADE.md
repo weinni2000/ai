@@ -113,3 +113,23 @@ Fresh database (`odev create -f -V 20.0 <db> -i base`) then
 | ai_oca_bridge | 0 failed, 0 error(s) of 31 tests |
 | ai_connection | 0 failed, 0 error(s) of 9 tests |
 | ai_oca_mcp | 0 failed, 0 error(s) of 11 tests |
+
+The JS unit tests are not counted in those totals: the cross-module
+`WebSuite`/`MobileWebSuite` wrappers absorb them. They do run, and the log
+proves it:
+
+```
+[HOOT] Running test "@ai_oca_bridge/web/test_ai_oca_bridge/AI Notification"
+[HOOT] Running test "@ai_oca_bridge/web/test_ai_oca_bridge/AI Action"
+[HOOT] Passed 2 tests (6 assertions)
+[HOOT] Test suite succeeded
+```
+
+`_get_hoot_module_filters` selects them from the tested module name, which is
+why `tests/test_frontend.py` (the local wrapper inherited from 19.0) was not
+needed anymore.
+
+The count alone still does not say *which* hoot tests ran: a filter matching
+no test also ends in `[HOOT] Test suite succeeded`. Grep the log for
+`[HOOT] Running test "@<module>/` to be sure the module's own tests were
+selected.
