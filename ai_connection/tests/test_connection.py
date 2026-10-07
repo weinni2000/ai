@@ -44,7 +44,7 @@ class TestConnection(TransactionCase):
         attachment = self.env["ir.attachment"].create(
             {
                 "name": "test.txt",
-                "datas": "SGVsbG8sIEFJIQ==",  # Base64 for "Hello, AI!"
+                "raw": b"Hello, AI!",
                 "mimetype": "text/plain",
             }
         )

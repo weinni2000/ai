@@ -40,7 +40,7 @@ class AiConnection(models.Model):
                 message["files"] = [
                     {
                         "name": attachment.name,
-                        "content": attachment.datas.decode("utf-8"),
+                        "content": attachment.raw.to_base64(),
                         "mimetype": attachment.mimetype,
                     }
                     for attachment in attachments
