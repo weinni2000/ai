@@ -4,7 +4,7 @@
 {
     "name": "Ai Oca Mcp",
     "summary": """MCP Interface for Odoo""",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "license": "AGPL-3",
     "author": "Dixmit,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/ai",
@@ -13,10 +13,10 @@
     ],
     "data": [
         "views/mcp_server_log.xml",
-        "security/ir.model.access.csv",
         "views/mcp_server_key.xml",
         "wizards/mcp_server_key_add.xml",
         "views/mcp_server.xml",
+        "security/ir.access.csv",
     ],
     "demo": [],
 }
