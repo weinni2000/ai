@@ -20,7 +20,7 @@ class McpServerKeyAdd(models.TransientModel):
         self.ensure_one()
         self.key = secrets.token_urlsafe(32)
         self.key_id.hashed_key = self.key_id._hash_key(self.key)
-        action = self.get_formview_action()
+        action = self.get_record_default_action()
         action["target"] = "new"
         return action
 
