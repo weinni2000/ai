@@ -96,8 +96,8 @@ class AiBridgeExecution(models.Model):
                 self.get_base_url(), f"/ai/response/{self.id}/{token}"
             )
         IrParamSudo = self.env["ir.config_parameter"].sudo()
-        dbuuid = IrParamSudo.get_param("database.uuid")
-        db_create_date = IrParamSudo.get_param("database.create_date")
+        dbuuid = IrParamSudo.get_str("database.uuid")
+        db_create_date = IrParamSudo.get_str("database.create_date")
         payload["_odoo"] = {
             "db": dbuuid,
             "db_name": self.env.cr.dbname,
