@@ -15,11 +15,10 @@
     "depends": ["mail"],
     "data": [
         "data/ir_module_category.xml",
-        "security/ir.model.access.csv",
-        "security/security.xml",
         "views/menu.xml",
         "views/ai_bridge_execution.xml",
         "views/ai_bridge.xml",
+        "security/ir.access.csv",
     ],
     "assets": {
         "web.assets_backend": [
