@@ -35,6 +35,6 @@ class McpServer(models.Model):
 
     @api.depends("key")
     def _compute_url(self):
-        base_url = self.env["ir.config_parameter"].sudo().get_param("web.base.url")
+        base_url = self.env["ir.config_parameter"].sudo().get_str("web.base.url")
         for record in self:
             record.url = f"{base_url}/mcp/{record.key}"
