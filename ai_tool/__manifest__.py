@@ -13,10 +13,10 @@
         "mail",
     ],
     "data": [
-        "security/ir.model.access.csv",
         "views/menu.xml",
         "views/ai_tool.xml",
         "data/ai_tools.xml",
+        "security/ir.access.csv",
     ],
     "demo": [],
 }
