@@ -1,0 +1,4 @@
+# generated from manifests external_dependencies
+fastapi>=0.110
+psycopg2-binary>=2.9
+uvicorn[standard]>=0.27

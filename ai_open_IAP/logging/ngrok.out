@@ -1,0 +1,25 @@
+t=2026-10-07T22:34:04+0200 lvl=info msg="no configuration paths supplied"
+t=2026-10-07T22:34:04+0200 lvl=info msg="using configuration at default config path" path=/home/weinni2000/snap/ngrok/429/.config/ngrok/ngrok.yml
+t=2026-10-07T22:34:04+0200 lvl=info msg="open config file" path=/home/weinni2000/snap/ngrok/429/.config/ngrok/ngrok.yml err=<nil>
+t=2026-10-07T22:34:04+0200 lvl=info msg="FIPS 140 mode" enabled=false
+t=2026-10-07T22:34:04+0200 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+t=2026-10-07T22:34:04+0200 lvl=info msg="client session established" obj=tunnels.session
+t=2026-10-07T22:34:04+0200 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-10-07T22:34:05+0200 lvl=info msg=start pg=/api/tunnels id=0c62fde9bfd0b196
+t=2026-10-07T22:34:05+0200 lvl=info msg=end pg=/api/tunnels id=0c62fde9bfd0b196 status=200 dur=145.38µs
+t=2026-10-07T22:34:05+0200 lvl=info msg="started tunnel" obj=tunnels name=command_line addr=http://localhost:20069 url=https://4dff-185-175-215-191.ngrok-free.app
+t=2026-10-07T22:34:05+0200 lvl=info msg=start pg=/api/tunnels id=8d0757fd366a57c1
+t=2026-10-07T22:34:05+0200 lvl=info msg=end pg=/api/tunnels id=8d0757fd366a57c1 status=200 dur=75.764µs
+t=2026-10-07T22:34:05+0200 lvl=info msg=start pg=/api/tunnels id=2d555230cf5c6cfb
+t=2026-10-07T22:34:05+0200 lvl=info msg=end pg=/api/tunnels id=2d555230cf5c6cfb status=200 dur=48.555µs
+t=2026-10-07T22:34:25+0200 lvl=info msg=start pg=/api/tunnels id=9f9641961286f796
+t=2026-10-07T22:34:25+0200 lvl=info msg=end pg=/api/tunnels id=9f9641961286f796 status=200 dur=51.516µs
+t=2026-10-07T22:34:25+0200 lvl=info msg="join connections" obj=join id=c44d69733af7 l=127.0.0.1:20069 r=185.175.215.191:63041
+t=2026-10-07T22:37:03+0200 lvl=info msg=start pg=/api/tunnels id=35ec821599254ea2
+t=2026-10-07T22:37:03+0200 lvl=info msg=end pg=/api/tunnels id=35ec821599254ea2 status=200 dur=106.607µs
+t=2026-10-07T22:37:41+0200 lvl=info msg="join connections" obj=join id=7f78b3758ac1 l=127.0.0.1:20069 r=34.34.184.217:48828
+t=2026-10-07T22:37:42+0200 lvl=info msg="join connections" obj=join id=c0fc54d30eb5 l=127.0.0.1:20069 r=34.34.184.217:38914
+t=2026-10-07T22:48:45+0200 lvl=info msg=start pg=/api/tunnels id=c47765b6718196ac
+t=2026-10-07T22:48:45+0200 lvl=info msg=end pg=/api/tunnels id=c47765b6718196ac status=200 dur=119.434µs
+t=2026-10-07T23:01:17+0200 lvl=info msg="INFO received stop request obj=app stopReq=\"{err:<nil> restart:false}\""
+t=2026-10-07T23:01:17+0200 lvl=info msg="session closing" obj=tunnels.session err=<nil>
