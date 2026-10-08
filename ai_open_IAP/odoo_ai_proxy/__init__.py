@@ -1,2 +1,0 @@
-"""Odoo AI endpoint proxy."""
-

@@ -1,1 +1,0 @@
-cd ~/doodba20/odoo/custom/src/ai/ai_open_IAP && ODOO_AI_PROXY_ODOO_DB=plane_20 python3 -m uvicorn odoo_ai_proxy.main:app --host 127.0.0.1 --port 8019
