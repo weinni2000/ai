@@ -15,7 +15,7 @@ except ImportError:
 
 
 class AiTool(models.Model):
-    _name = "ai.tool"
+    _name = "ai.oca.tool"
     _description = "AI Tool"
 
     name = fields.Char(required=True)
